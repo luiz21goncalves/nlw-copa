@@ -1,0 +1,21 @@
+{
+  "extends": ["airbnb-base-typescript-prettier"],
+  "rules": {
+    "camelcase": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": ["**/seed.ts"]
+    }],
+    "import/order": ["warn", {
+      "groups": [
+        ["builtin", "external"],
+        "internal",
+        ["parent", "sibling", "index"]
+      ],
+      "newlines-between": "always",
+      "alphabetize": {
+        "order": "asc"
+      }
+    }]
+  }
+}

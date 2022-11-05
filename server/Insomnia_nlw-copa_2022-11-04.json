@@ -1,0 +1,428 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-11-04T23:33:58.001Z",
+  "__export_source": "insomnia.desktop.app:v2022.6.0",
+  "resources": [
+    {
+      "_id": "req_58a80bef71274e68b78c97f28ed8c527",
+      "parentId": "fld_a937776aead74db788d39d87fe60e204",
+      "modified": 1667604781884,
+      "created": 1667497713728,
+      "url": "{{ _.baseUrl }}/pools/cla321z9n0001i0y77n4auwkn/games",
+      "name": "List Games",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1667494479342.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_a937776aead74db788d39d87fe60e204",
+      "parentId": "wrk_502bd1c2012644fabc0fc7df3193cba5",
+      "modified": 1667497698260,
+      "created": 1667497698260,
+      "name": "Games",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1667497698260,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_502bd1c2012644fabc0fc7df3193cba5",
+      "parentId": null,
+      "modified": 1667485942840,
+      "created": 1667485942840,
+      "name": "NLW Copa",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_acc6bc03806841839b3381d39642beb7",
+      "parentId": "fld_0e2a56763ffa41919f48d89125f9dd66",
+      "modified": 1667486050898,
+      "created": 1667485997972,
+      "url": "{{ _.baseUrl }}/guesses/count",
+      "name": "Count guess",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1667485997972,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0e2a56763ffa41919f48d89125f9dd66",
+      "parentId": "wrk_502bd1c2012644fabc0fc7df3193cba5",
+      "modified": 1667486063438,
+      "created": 1667485996616,
+      "name": "Guesses",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1667486034828,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_138539e5b2194561b8d94b8effff7f60",
+      "parentId": "fld_0e2a56763ffa41919f48d89125f9dd66",
+      "modified": 1667604562342,
+      "created": 1667504774136,
+      "url": "{{ _.baseUrl }}/pools/cla2xk6b10003i0489d56qofs/games/cla2xk6b50008i0484olt4ag7/guesses",
+      "name": "Create Guess",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"firstTeamPoints\": 1,\n\t\"secondTeamPoints\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1667485997947,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_745690185955446280186a4a2fa0f590",
+      "parentId": "fld_d9559d95d9404f9785f5928e93d46385",
+      "modified": 1667496270805,
+      "created": 1667493916026,
+      "url": "{{ _.baseUrl }}/me",
+      "name": "Me",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1667493916026,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_d9559d95d9404f9785f5928e93d46385",
+      "parentId": "wrk_502bd1c2012644fabc0fc7df3193cba5",
+      "modified": 1667486108545,
+      "created": 1667486034777,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1667486034778,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_16d5c05801b24566ad2b16adde023929",
+      "parentId": "fld_d9559d95d9404f9785f5928e93d46385",
+      "modified": 1667598949055,
+      "created": 1667487141939,
+      "url": "{{ _.baseUrl }}/users",
+      "name": "Sign In / Sign Up",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"access_token\": \"{{ _.accessToken }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1667487141939,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3186a49b8c854847be06642b414899cb",
+      "parentId": "fld_d9559d95d9404f9785f5928e93d46385",
+      "modified": 1667486054674,
+      "created": 1667486046381,
+      "url": "{{ _.baseUrl }}/users/count",
+      "name": "Count User",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1667485997922,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_32f09ff3c5754b4db930f89e73a712c5",
+      "parentId": "fld_fb3695152a0d4666b3d62710d3f396d3",
+      "modified": 1667504865877,
+      "created": 1667496169291,
+      "url": "{{ _.baseUrl }}/pools",
+      "name": "List Pools",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1667496169291,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_fb3695152a0d4666b3d62710d3f396d3",
+      "parentId": "wrk_502bd1c2012644fabc0fc7df3193cba5",
+      "modified": 1667486077490,
+      "created": 1667486077490,
+      "name": "Pools",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1667486034728,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_8c89677a4a90458d8bac9f0fd7497df5",
+      "parentId": "fld_fb3695152a0d4666b3d62710d3f396d3",
+      "modified": 1667601147786,
+      "created": 1667496599384,
+      "url": "{{ _.baseUrl }}/pools/cla2xk6b10003i0489d56qofs",
+      "name": "Show Pool",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1667495042658.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_492721ac0b18406792b779c8f6dfb453",
+      "parentId": "fld_fb3695152a0d4666b3d62710d3f396d3",
+      "modified": 1667486128143,
+      "created": 1667486077491,
+      "url": "{{ _.baseUrl }}/pools/count",
+      "name": "Count Pool",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1667485997922,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5e90390a15ab4db2b6e205b291d578a5",
+      "parentId": "fld_fb3695152a0d4666b3d62710d3f396d3",
+      "modified": 1667599795152,
+      "created": 1667486141121,
+      "url": "{{ _.baseUrl }}/pools",
+      "name": "Create Pool",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"Anne Brava | com owner\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}",
+        "disabled": false
+      },
+      "metaSortKey": -1667485997872,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_54f6c1c7f59842769968bc8ed3a99ea3",
+      "parentId": "fld_fb3695152a0d4666b3d62710d3f396d3",
+      "modified": 1667603943261,
+      "created": 1667505258673,
+      "url": "{{ _.baseUrl }}/pools/join",
+      "name": "Join Pool",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"code\": \"QE9ATH\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1667485997822,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_a4f3cccfba516f8b2d09ef7b02e75b3c9f121ff7",
+      "parentId": "wrk_502bd1c2012644fabc0fc7df3193cba5",
+      "modified": 1667485945614,
+      "created": 1667485942856,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": {},
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1667485942856,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_a4f3cccfba516f8b2d09ef7b02e75b3c9f121ff7",
+      "parentId": "wrk_502bd1c2012644fabc0fc7df3193cba5",
+      "modified": 1667485942857,
+      "created": 1667485942857,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_dcef327432bd4dad9f704a78139b43e5",
+      "parentId": "wrk_502bd1c2012644fabc0fc7df3193cba5",
+      "modified": 1667485942851,
+      "created": 1667485942851,
+      "fileName": "NLW Copa",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_6432474fd7b34adab4439d2111063727",
+      "parentId": "env_a4f3cccfba516f8b2d09ef7b02e75b3c9f121ff7",
+      "modified": 1667598948900,
+      "created": 1667485947043,
+      "name": "Dev",
+      "data": {
+        "baseUrl": "http://localhost:3333",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTHVpeiBHb27Dp2FsdmVzIiwiYXZhdGFyVXJsIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MFY0eUthNTFHNk5RUFJSZkh4ZWRMS2tyemlDYmRJOEk1OGJ3ejA9czk2LWMiLCJzdWIiOiJjbGEzMWNqY3EwMDAwaTAybmx0dW8xa2NrIiwiaWF0IjoxNjY3NTk4OTMyLCJleHAiOjE2Njc2MDYxMzJ9.ZtNiTwMcwBR4Xc5qeGggfuAUNxJUUGW__m-6zkyHu28",
+        "accessToken": "ya29.a0AeTM1ifNH271-he5DNGNAgXoHsuxVjT7XRkPvKIZvC7o3iBPICZpfJMKMqs7MfC0RT-y04q6D8CVqQO_cNEiL4fAEK6uTN9KrzWSe65q7epiRpq2A5vKFQLrAov0EJZm_QX83P4yQcjZc0_m2odRVcQgYsDg4waCgYKAeUSARASFQHWtWOm24Qa0X7pj6lgnrnPpiLKEw0165"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl",
+          "token",
+          "accessToken"
+        ]
+      },
+      "color": "#8159c1",
+      "isPrivate": false,
+      "metaSortKey": 1667485947043,
+      "_type": "environment"
+    }
+  ]
+}

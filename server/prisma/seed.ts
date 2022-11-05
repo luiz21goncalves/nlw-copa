@@ -1,16 +1,16 @@
-import { PrismaClient } from "@prisma/client"
-import { faker } from '@faker-js/faker'
+import { PrismaClient } from "@prisma/client";
+import { faker } from "@faker-js/faker";
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
 async function main() {
   const user = await prisma.user.create({
     data: {
       name: faker.name.fullName(),
       email: faker.internet.email(),
-      avatarUrl: faker.internet.avatar()
-    }
-  })
+      avatarUrl: faker.internet.avatar(),
+    },
+  });
 
   const poll = await prisma.pool.create({
     data: {
@@ -19,25 +19,25 @@ async function main() {
       ownerId: user.id,
       participants: {
         create: {
-          userId: user.id
-        }
-      }
-    }
-  })
+          userId: user.id,
+        },
+      },
+    },
+  });
 
   await prisma.game.create({
     data: {
       date: faker.date.future(),
-      firstTeamCountryCode: faker.address.countryCode('alpha-2'),
-      secondTeamCountryCode: faker.address.countryCode('alpha-2')
-    }
-  })
+      firstTeamCountryCode: faker.address.countryCode("alpha-2"),
+      secondTeamCountryCode: faker.address.countryCode("alpha-2"),
+    },
+  });
 
   await prisma.game.create({
     data: {
       date: faker.date.future(),
-      firstTeamCountryCode: faker.address.countryCode('alpha-2'),
-      secondTeamCountryCode: faker.address.countryCode('alpha-2'),
+      firstTeamCountryCode: faker.address.countryCode("alpha-2"),
+      secondTeamCountryCode: faker.address.countryCode("alpha-2"),
 
       guesses: {
         create: {
@@ -47,14 +47,14 @@ async function main() {
             connect: {
               userId_poolId: {
                 userId: user.id,
-                poolId: poll.id
-              }
-            }
-          }
-        }
-      }
-    }
-  })
+                poolId: poll.id,
+              },
+            },
+          },
+        },
+      },
+    },
+  });
 }
 
-main()
+main();

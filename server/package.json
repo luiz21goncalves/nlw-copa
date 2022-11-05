@@ -5,13 +5,17 @@
   "license": "MIT",
   "author": "Luiz Gonçalves <luizhbgoncalves@gmail.com>",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint --ext .ts,.js .",
+    "lint:fix": "eslint --ext .ts,.js . --fix"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "@fastify/cors": "^8.1.1",
+    "@fastify/env": "^4.1.0",
+    "@fastify/jwt": "^6.3.2",
     "@prisma/client": "4.5.0",
     "fastify": "^4.9.2",
     "short-unique-id": "^4.4.4",
@@ -20,6 +24,12 @@
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
     "@mermaid-js/mermaid-cli": "^9.1.7",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base-typescript-prettier": "^5.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
     "prisma": "^4.5.0",
     "prisma-erd-generator": "^1.2.2",
     "tsx": "^3.11.0",
