@@ -31,7 +31,7 @@ export async function guessRoutes(fastify: FastifyInstance) {
       );
       const userId = request.user.sub;
 
-      const pool = await prisma.participant.findUnique({
+      const pool = await prisma.pool.findUnique({
         where: {
           id: poolId,
         },
